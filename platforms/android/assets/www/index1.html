@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Acc Mobile</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="css/ratchet.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <script type="text/javascript" src="js/libraries/ratchet.min.js"></script>
+  </head>
+  <body>	
+<!--begin main content-->
+    <div class="content content-padded">
+      <form id="login-form" class="content-padded">
+        <input type="text" name="l-user" placeholder="username" required>
+		    <input type="password" name="l-passwrd" placeholder="password" required>
+		     
+          <div id="loading-msg" class="hide">Sending...</div>
+          <div id="login-error-msg" class="hide error content-padded"></div>
+        <button id="submit-login" class="btn btn-positive btn-block" >Login</button>
+      </form>
+	  <p>Don't have an account?Sign In.</p>
+	   <a class="btn btn-positive btn-block " href="#signupModal">Sign Up</a>
+    </div><!-- /.content -->
+	
+	 <!-- sign up modal -->
+    <div id="signupModal" class="modal">
+	  <header class="bar bar-nav">
+        <a class="icon icon-close pull-right" href="#signupModal"></a>
+        <h1 class="title">Sign Up</h1>
+      </header>
+      <div class="content">
+      <form id="signup" class="content-padded">
+      
+		  <input type="text" name="s-user" placeholder="enter username" required> 
+    
+		  <input type="password" name="s-passwrd" placeholder="enter password" required >
+      
+		  <input type="email" name="s-email"placeholder="enter email" required>
+
+      <div id="loading-msg" class="hide">Sending...</div>
+      <div id="signup-success-msg" class="hide success content-padded"></div>
+      <div id="signup-error-msg" class="hide error content-padded"></div>
+		  <button id="submit-signup" class="signup btn btn-positive btn-block">Sign Up</button>
+      </form>
+
+      </div>
+    </div><!-- /.modal -->
+    <script type="text/javascript" src="js/libraries/jquery.min.js"></script>
+    <script type="text/javascript" src="js/libraries/validation.js"></script>
+    <script type="text/javascript" src="js/libraries/underscore-min.js"></script>
+    <script type="text/javascript" src="js/libraries/storageapi.js"></script> 
+    <script type="text/javascript" src="js/index.js"></script>
+
+  </body>
+</html>

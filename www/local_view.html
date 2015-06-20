@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Acc Mobile</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="css/ratchet.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <script type="text/javascript" src="js/ratchet.min.js"></script>
+  </head>
+  <body>
+    <header class="bar bar-nav">
+      <a class="icon icon-person pull-right" href="#optionsModal"></a>
+	  
+	 <!-- <a class="btn btn-outlined pull-right" href="#newitemModal">+ Add</a>-->
+      <h1 class="title">Acc Mobile</h1>
+    </header>
+	
+<!--begin main content-->
+    <div class="content">
+      <ul class="table-view">
+        <li class="table-view-cell table-view-divider">Local Ads</li>
+        <li class="table-view-cell media">
+          <a class="navigate-right" href="ad_view.html" data-transition="slide-in">
+            <img class="media-object pull-left" src="img/cola.png" alt="Placeholder image for Argo's poster">
+            <div class="media-body">
+              Argo
+              <p>Lorem ipsum dolor sit amet, consectetur.</p>
+			   <p><img src="img/up.png">&nbsp;23 &nbsp; <img src="img/down.png">&nbsp;4</p>
+            </div>
+          </a>
+        </li>
+        <li class="table-view-cell media">
+          <a class="navigate-right" href="ad_view.html" data-transition="slide-in">
+            <img class="media-object pull-left" src="img/stationery.png" alt="Placeholder image for Wreck-it Ralph's poster">
+            <div class="media-body">
+              Wreck-it Ralph
+              <p>Lorem ipsum dolor sit amet, consectetur.</p>
+			   <p><img src="img/up.png">&nbsp;23 &nbsp; <img src="img/down.png">&nbsp;4</p>
+            </div>
+          </a>
+        </li>
+      
+	  <!--navigation-->
+			  
+			  <nav class="bar bar-tab">
+				  <a class="tab-item" href="#">
+					<span class="icon icon-home"></span>
+					<span class="tab-label">Home</span>
+				  </a>
+				  <a class="tab-item" href="popular_view.html" data-transition="slide-in">
+					<span class="icon icon-person"></span>
+					<span class="tab-label">Popular</span>
+				  </a>
+				  <a class="tab-item active" >
+					<span class="icon icon-star-filled"></span>
+					<span class="tab-label">Local</span>
+				  </a>
+				  <a class="tab-item" href="#additemModal">
+					<span class="icon icon-search"></span>
+					<span class="tab-label">Add New</span>
+				  </a>
+				  <a class="tab-item" href="#">
+					<span class="icon icon-gear"></span>
+					<span class="tab-label">Settings</span>
+				  </a>
+		     </nav>
+
+	  
+	  <!--end navigation-->
+    </div><!-- /.content -->
+
+    <!-- Options modal -->
+    <div id="optionsModal" class="modal">
+	  <header class="bar bar-nav">
+        <a class="icon icon-close pull-right" href="#optionsModal"></a>
+        <h1 class="title">Options</h1>
+      </header>
+      <div class="content">
+        <ul class="table-view">
+			  <li class="table-view-cell media">
+				<a class="navigate-right" href="edit_profile.html" data-transition="slide-in">
+				  <span class="media-object pull-left icon icon-edit"></span>
+				  <div class="media-body">
+					Edit
+				  </div>
+				</a>
+			  </li>
+			  <li class="table-view-cell media">
+				<a class="navigate-right">
+				  <span class="media-object pull-left icon icon-close"></span>
+				  <div class="media-body">
+					Logout
+				  </div>
+				</a>
+			  </li>
+        </ul>
+      </div>
+    </div><!-- /.modal -->
+	
+	 <!-- Add Item modal -->
+    <div id="additemModal" class="modal">
+	  <header class="bar bar-nav">
+        <a class="icon icon-close pull-right" href="#additemModal"></a>
+        <h1 class="title">Add New Item</h1>
+      </header>
+      <div class="content">
+        <form class="content-padded">
+		  <input type="url" placeholder="Item/add url">
+		  <input type="text" placeholder="Title">
+		  <input type="number" placeholder="Price">
+		  <select>
+			  <option value="volvo">--Select a category--</option>
+			  <option value="saab">Saab</option>
+			  <option value="opel">Opel</option>
+			  <option value="audi">Audi</option>
+           </select>
+		    <select>
+			  <option value="volvo">--Pick Your Location--</option>
+			  <option value="saab">Saab</option>
+			  <option value="opel">Opel</option>
+			  <option value="audi">Audi</option>
+           </select>  
+		   <textarea placeholde="Description">
+		   </textarea>
+		   <input type="file" name="fileToUpload" id="fileToUpload">
+		   
+		  <button class="btn btn-positive btn-block">Add</button>
+        </form>
+
+      </div>
+    </div><!-- /.modal -->
+  </body>
+</html>
+

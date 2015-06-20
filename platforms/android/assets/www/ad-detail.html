@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>BGI DEMO</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="css/ratchet.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    
+  </head>
+  <body>
+    <header class="bar bar-nav bar-texture">
+      <a id="back" class="icon icon-left-nav pull-left"></a>
+	 <!-- <a class="btn btn-outlined pull-right" href="#newitemModal">+ Add</a>-->
+      <h1 class="title">Topic View</h1>
+    </header>
+<!--begin main content-->
+    <div class="content content-padded">
+      <div id="details">
+      </div>
+      <br/>
+      <form id="add-item" class="input-group">
+        <textarea id="comment"placeholder="Respond to this topic" required></textarea>
+        <button id="submit-comment" class="btn">Send</button>
+      </form>
+      <br/>
+    	<ul id="responses"class="table-view">  
+      </ul>      	  
+	  <!--footer--> 
+    </div><!-- /.content -->
+   <!--comment modal-->
+    
+    <script type="text/javascript" src="js/libraries/ratchet.min.js"></script>
+    <script type="text/javascript" src="js/libraries/jquery.min.js" ></script>
+    <script type="text/javascript" src="js/libraries/validation.js"></script>
+    <script type="text/javascript" src="js/libraries/underscore-min.js"></script>
+    <script type="text/javascript" src="js/libraries/storageapi.js"></script>
+    <script type="text/javascript" src="js/details.js"></script>
+   <script type="text/template" id="topic-detail">
+          <h3><%= rc.topic_detail[0].subject %></h3>
+          <p><i>Posted by:<%= rc.topic_detail[0].username %></i></p>
+          <p><i>From: <%= rc.topic_detail[0].ward %> ward.</i></p>
+          <p><%= rc.topic_detail[0].topic_content %></p>
+    </script>
+    <script type="text/template" id="response-temp">
+    <% if(rc.t_error){ %>
+      <li class="table-view-cell">
+              <p class="center-text"><%= rc.t_error %> </p>
+      </li>
+     <% } else{ _.each(rc.topic_response, function(list){ %>
+        <li class="table-view-cell">
+              <h6><%=list.username %></h6>
+              <p><%= list.response_content %></p>
+        </li>
+       <% }); } %>
+    </script> 
+  </body>
+</html>
+
